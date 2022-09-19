@@ -35,4 +35,4 @@ jobs:
       - name: Upload AIFlow package
         run: |
           python3 setup.py sdist bdist_wheel
-          twine upload --repository-url https://test.pypi.org/legacy/ --username=${{ secrets.PYPI_REPOSITORY_USERNAME }} --password=${{ secrets.PYPI_REPOSITORY_PASSWORD }}
+          twine upload --repository-url https://test.pypi.org/legacy/ --username=${{ secrets.PYPI_REPOSITORY_USERNAME }} --password=${{ secrets.PYPI_REPOSITORY_PASSWORD }} dist/*
